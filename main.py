@@ -2,8 +2,8 @@ from tkinter import *
 from tkinter import messagebox
  
 def add_message():
-  if message_entry.get() == '':
-    message_entry1.set(0, message_entry)
+  if message_entry.get() != '':
+    message_entry1.insert(0, message.get())
     
  
 root = Tk()
@@ -12,6 +12,8 @@ root.geometry("300x200+150+150")
  
 message = StringVar()
 add = StringVar() 
+
+
 
 message_entry = Entry(textvariable=message)
 message_entry.place(x=150, y=50, anchor="c")
